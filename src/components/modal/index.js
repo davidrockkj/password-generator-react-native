@@ -12,7 +12,7 @@ const Modal = ({ password, handleClose }) => {
 
     // Salvando a senha quando ela for copiada
     await saveItem("@pass", (password))
-    
+
     alert("Senha salva com sucesso!"); // Mensagem de retorno
 
 
@@ -24,7 +24,7 @@ const Modal = ({ password, handleClose }) => {
       <View style={styles.content}>
         <Text style={styles.title}>Senha gerada</Text>
 
-        <Pressable style={styles.innerPassword} onPress={handleCopyPassword}> // Ao apertar na área preta, a função é chamada
+        <Pressable style={styles.innerPassword} onPress={handleCopyPassword}> {/* Ao apertar na área preta, a função é chamada */}
           <Text style={styles.text}>{password}</Text>
         </Pressable>
 
@@ -33,7 +33,7 @@ const Modal = ({ password, handleClose }) => {
             <Text style={styles.buttonText}>Voltar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={[styles.button, styles.buttonSave]}>
+          <TouchableOpacity style={[styles.button, styles.buttonSave]} onPress={handleCopyPassword}>
             <Text style={styles.buttonSaveText}>Salvar senha</Text>
           </TouchableOpacity>
         </View>
