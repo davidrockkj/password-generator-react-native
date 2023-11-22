@@ -1,11 +1,15 @@
-import { View } from 'react-native';
+// Importando o NavigationContainer
+import { NavigationContainer } from '@react-navigation/native'; 
+
+// Importando o componente das Rotas
+import { Routes } from './src/routes'
 
 
 export default function App() {
 
   return (
-    <View>
-      
-    </View>
+    <NavigationContainer>
+      <Routes /> // Chamando o componente das rotas
+    </NavigationContainer>
   );
 }
