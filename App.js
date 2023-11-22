@@ -4,7 +4,7 @@ import Slider from '@react-native-community/slider'
 import ModalPassword from './src/components/modal/index'
 
 
-let charset = "abcdefghiabcdefghijklmnopqrstuvwxyzjklmnopqrstABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()-=_+[];:,.<>/?";
+let charset = "abcdefghiabcdefghijklmnopqrstuvwxyzjklmnopqrstABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*-=_+;:,.<>/?";
 
 const App = () => {
   const [size, setSize] = useState(8) // 10 é o valor que vai começar
