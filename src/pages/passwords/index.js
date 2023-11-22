@@ -1,4 +1,4 @@
-import {} from 'react-native';
+import { View, Text } from 'react-native';
 
 export function Passwords(){
   return (
@@ -7,9 +7,3 @@ export function Passwords(){
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    
-  }
-})

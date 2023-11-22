@@ -16,11 +16,17 @@ export function Routes(){
       <Tab.Screen 
         name='home' // nome da página
         component={Home} // qual componente vai exibir nessa página
+        options={{
+          headerShown: false, // Removendo o Header
+        }}
       />
 
       <Tab.Screen 
         name='passwords' // nome da página
         component={Passwords} // qual componente vai exibir nessa página
+        options={{
+          headerShown: false, // Removendo o Header
+        }}
       />
     </Tab.Navigator>
   )
