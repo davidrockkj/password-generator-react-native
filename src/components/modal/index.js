@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-import * as Clipboard from 'expo-clipboard';
+import * as Clipboard from 'expo-clipboard'; // Importando as funcionalidades da Clipboard
 
 const Modal = ({ password, handleClose }) => {
 
@@ -15,7 +15,7 @@ const Modal = ({ password, handleClose }) => {
       <View style={styles.content}>
         <Text style={styles.title}>Senha gerada</Text>
 
-        <Pressable style={styles.innerPassword} onLongPress={handleCopyPassword}>
+        <Pressable style={styles.innerPassword} onPress={handleCopyPassword}> // Ao apertar na área preta, a função é chamada
           <Text style={styles.text}>{password}</Text>
         </Pressable>
 
