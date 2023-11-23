@@ -7,9 +7,9 @@ import ModalPassword from '../../components/modal'
 let charset = "abcdefghiabcdefghijklmnopqrstuvwxyzjklmnopqrstABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*-=_+;:,.<>/?";
 
 export function Home() {
-  const [size, setSize] = useState(8) // 10 é o valor que vai começar
-  const [passwordValue, setPasswordValue] = useState(""); // para salvar o valor da senha
-  const [modalVisible, setModalVisible] = useState(false); // Controlar a visibilidade do Modal
+  const [size, setSize] = useState(8) /* 10 é o valor que vai começar */
+  const [passwordValue, setPasswordValue] = useState(""); /* para salvar o valor da senha */
+  const [modalVisible, setModalVisible] = useState(false); /* Controlar a visibilidade do Modal */
 
   function generatePassword() {
     let password = "";
@@ -20,6 +20,7 @@ export function Home() {
 
     setPasswordValue(password);
     setModalVisible(true);
+    console.log('E11111111111111111111111');
   }
 
   return (
@@ -44,7 +45,7 @@ export function Home() {
       </View>
 
       <TouchableOpacity style={styles.button} onPress={generatePassword}>
-        <Text style={styles.buttonText}>Gerar senha</Text>
+        <Text style={styles.buttonText} >Gerar senha</Text>
       </TouchableOpacity>
 
       <Modal visible={modalVisible} animationType='fade' transparent={true}>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet, Pressable } from 'react-native';
 
-export function passwordItem({ data, removePassword }) {
+export function PasswordItem({ data, removePassword }) {
   return (
-    <Pressable onLongPress={removePassword}>
+    <Pressable onLongPress={removePassword} style={styles.container}>
       <Text>{data}</Text>
     </Pressable>
   );

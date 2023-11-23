@@ -1,7 +1,7 @@
-// Importando o NavigationContainer
+/* Importando o NavigationContainer */
 import { NavigationContainer } from '@react-navigation/native'; 
 
-// Importando o componente das Rotas
+/* Importando o componente das Rotas */
 import { Routes } from './src/routes'
 
 

@@ -1,22 +1,24 @@
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-import * as Clipboard from 'expo-clipboard'; // Importando as funcionalidades da Clipboard
+import * as Clipboard from 'expo-clipboard'; /* Importando as funcionalidades da Clipboard */
 import useStorage from '../../hooks/useStorage';
 
 const Modal = ({ password, handleClose }) => {
 
-  // Declarando o hook useStorage dentro do componente
+  /* Declarando o hook useStorage dentro do componente */
   const { saveItem } = useStorage();
 
   async function handleCopyPassword() {
-    await Clipboard.setStringAsync(password) // Salvar uma string(password) no CTRL+C
+    await Clipboard.setStringAsync(password) /* Salvar uma string(password) no CTRL+C */
 
-    // Salvando a senha quando ela for copiada
+    /* Salvando a senha quando ela for copiada */
     await saveItem("@pass", (password))
 
-    alert("Senha salva com sucesso!"); // Mensagem de retorno
+    alert("Senha salva com sucesso!"); /* Mensagem de retorno */
+    
+    console.log(password);
 
 
-    handleClose(); // Ele fecha o modal assim que a senha for copiada
+    handleClose(); /* Ele fecha o modal assim que a senha for copiada */
   }
 
   return (
