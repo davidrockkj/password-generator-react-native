@@ -15,7 +15,7 @@ export function Passwords(){
   const focused = useIsFocused();
 
   // Inicializando o useStorage
-  const {getItem} = useStorage();
+  const { getItem, removeItem } = useStorage();
   
 
   /** Criando useEffect
@@ -35,6 +35,21 @@ export function Passwords(){
   }, [focused] ) 
 
 
+  /** Função que deleta o item */
+  async function handleDeletePassword(item) {
+
+    const passwords = await removeItem("@pass", item);
+      /**  Chamando o hook personalizado para remover o item
+       * Precisa passar a chave
+       * Precisa passar o item que é pra remover
+       * A função removeItem irá devolver uma lista atualizada e salvar na variável 'passwords'
+       */
+
+    /* Informando ao useState que a lista mudou */
+    setListPasswords(passwords);
+    
+  }
+
   return (
     <SafeAreaView style={{ flex: 1, }}> {/* Usando para o texto não ficar escondido */}
 
@@ -47,7 +62,7 @@ export function Passwords(){
           style={{ flex:1, paddingTop: 14, }}
           data={listPasswords}
           keyExtractor={ (item) => String(item) /* identificar qual é um item único */} 
-          renderItem={ ({ item }) => <PasswordItem data={item} /> /* Quando vai renderizar os itens */} 
+          renderItem={ ({ item }) => <PasswordItem data={item} removePassword={ () => handleDeletePassword(item)} /> /* Quando vai renderizar os itens */} 
         />
       </View>
 
