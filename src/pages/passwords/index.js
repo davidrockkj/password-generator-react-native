@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-  // useEffect é o efeito colateral - nesse caso pra carregar algo quando a entrar na tela
+  /* useEffect é o efeito colateral - nesse caso pra carregar algo quando a entrar na tela */
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useIsFocused } from '@react-navigation/native';
@@ -8,13 +8,13 @@ import { PasswordItem } from './components/passworditem';
 
 export function Passwords(){
 
-  // Criando uma State que passa as listas
+  /* Criando uma State que passa as listas */
   const [listPasswords, setListPasswords] = useState([]);
 
-  // Inicializando o useIsFocused (que é um booleano)
+  /* Inicializando o useIsFocused (que é um booleano) */
   const focused = useIsFocused();
 
-  // Inicializando o useStorage
+  /* Inicializando o useStorage */
   const { getItem, removeItem } = useStorage();
   
 
@@ -24,10 +24,12 @@ export function Passwords(){
    */ 
   useEffect( () => {
 
-    // Buscar a lista de senhas
+    /* Buscar a lista de senhas */
     async function loadPasswords(){
       const passwords = await getItem("@pass");
-      setListPasswords(passwords); // Salvando as senhas
+      
+      /* Salvando as senhas */
+      setListPasswords(passwords);
     }
 
     loadPasswords();
@@ -51,7 +53,8 @@ export function Passwords(){
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, }}> {/* Usando para o texto não ficar escondido */}
+    <SafeAreaView style={{ flex: 1, }}>
+      {/* Usando para o texto não ficar escondido */}
 
       <View style={styles.header}>
         <Text style={styles.title}>Minhas senhas</Text>
@@ -61,8 +64,15 @@ export function Passwords(){
         <FlatList 
           style={{ flex:1, paddingTop: 14, }}
           data={listPasswords}
-          keyExtractor={ (item) => String(item) /* identificar qual é um item único */} 
-          renderItem={ ({ item }) => <PasswordItem data={item} removePassword={ () => handleDeletePassword(item)} /> /* Quando vai renderizar os itens */} 
+          keyExtractor={ (item) => String(item)
+            /* identificar qual é um item único */
+          } 
+          renderItem={ ({ item }) => <PasswordItem data={item} removePassword={ () => handleDeletePassword(item)} />
+          /* Quando vai renderizar os itens */
+          } 
+          showsHorizontalScrollIndicator={
+            false
+            /* Tentando esconder o scrollbar */}
         />
       </View>
 

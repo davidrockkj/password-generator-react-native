@@ -26,7 +26,8 @@ const Modal = ({ password, handleClose }) => {
       <View style={styles.content}>
         <Text style={styles.title}>Senha gerada</Text>
 
-        <Pressable style={styles.innerPassword} onPress={handleCopyPassword}> {/* Ao apertar na área preta, a função é chamada */}
+        <Pressable style={styles.innerPassword} onPress={handleCopyPassword}>
+          {/* Ao apertar na área preta, a função é chamada */}
           <Text style={styles.text}>{password}</Text>
         </Pressable>
 

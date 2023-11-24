@@ -17,34 +17,35 @@ export function Routes(){
   return(
     <Tab.Navigator>
       <Tab.Screen 
-        name='home' // nome da página
-        component={Home} // qual componente vai exibir nessa página
+        name='home'
+        component={Home}
         options={{
-          headerShown: false, // Removendo o Header
+          headerShown: false,
           tabBarIcon: ({ focused, size, color }) => {
 
-            // Se estiver com foco na tela
             if (focused) {
               return <Ionicons size={size} color={color} name='home' />
             }
-            // Se não
             return <Ionicons size={size} color={color} name='home-outline' />
           }
         }}
       />
 
       <Tab.Screen 
-        name='passwords' // nome da página
-        component={Passwords} // qual componente vai exibir nessa página
+        /* nome da página */
+        name='passwords'
+        /* qual componente vai exibir nessa página */
+        component={Passwords}
         options={{
-          headerShown: false, // Removendo o Header
+          /* Removendo o Header */
+          headerShown: false,
           tabBarIcon: ({ focused, size, color }) => {
 
-            // Se estiver com foco na tela
+            {/* Se estiver com foco na tela */}
             if (focused) {
               return <Ionicons size={size} color={color} name='lock-closed' />
             }
-            // Se não
+            {/* Se não */}
             return <Ionicons size={size} color={color} name='lock-closed-outline' />
           }
         }}

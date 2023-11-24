@@ -9,7 +9,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Routes /> {/* Chamando o componente das rotas */}
+      <Routes />
+      {/* Chamando o componente das rotas */}
     </NavigationContainer>
   );
 }
