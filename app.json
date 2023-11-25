@@ -21,16 +21,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.davidrockkj.gerador"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "5d1f9e62-5f1d-4951-9a42-3fac55b0f1bd"
-      }
     }
   }
 }
