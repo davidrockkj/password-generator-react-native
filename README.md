@@ -9,6 +9,16 @@
 ![passwords](/src/screenshot/6-passwords.jpg?raw=true "Passwords")
 ![password](/src/screenshot/7-password-deleted.jpg?raw=true "Password deleted")
 
+<p float="center">
+ <img src="/src/screenshot/1-home.jpg" width="200" alt="Home" />
+ <img src="/src/screenshot/2-generated-password.jpg" width="200" alt="Generated 8 char password" />
+ <img src="/src/screenshot/3-saved-password.jpg" width="200" alt="Saved Password" />
+ <img src="/src/screenshot/4-home.jpg" width="200" alt="Home" />
+ <img src="/src/screenshot/5-generated-password.jpg" width="200" alt="Generated 17 char password" />
+ <img src="/src/screenshot/6-passwords.jpg" width="200" alt="Passwords" />
+ <img src="/src/screenshot/7-password-deleted.jpg" width="200" alt="After delete a password" />
+</p>
+
 
 Built React Native and Expo.
 
