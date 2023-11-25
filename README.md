@@ -1,14 +1,6 @@
 # Password Generator - React-Native Expo
 
 
-![home](/src/screenshot/1-home.jpg?raw=true "Home")
-![generated-password](/src/screenshot/2-generated-password.jpg?raw=true "8 char password")
-![saved-password](/src/screenshot/3-saved-password.jpg?raw=true "Saved Password")
-![home](/src/screenshot/4-home.jpg?raw=true "Home")
-![generated-password](/src/screenshot/5-generated-password.jpg?raw=true "17 char password")
-![passwords](/src/screenshot/6-passwords.jpg?raw=true "Passwords")
-![password](/src/screenshot/7-password-deleted.jpg?raw=true "Password deleted")
-
 <p float="center">
  <img src="/src/screenshot/1-home.jpg" width="200" alt="Home" />
  <img src="/src/screenshot/2-generated-password.jpg" width="200" alt="Generated 8 char password" />
