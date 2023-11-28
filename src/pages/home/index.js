@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, Modal, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Modal } from 'react-native';
 import Slider from '@react-native-community/slider'
 import ModalPassword from '../../components/modal'
 
@@ -25,9 +25,6 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <StatusBar 
-        style='dark'
-      />
       <Image
         style={styles.logo}
         source={require("../../assets/logo.png")}

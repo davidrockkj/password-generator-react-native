@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="#0000FF" barStyle="light-content" />
+      <StatusBar style='dark' />
       <Routes />
       {/* Chamando o componente das rotas */}
     </NavigationContainer>
